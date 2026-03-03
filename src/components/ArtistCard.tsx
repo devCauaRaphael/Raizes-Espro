@@ -25,6 +25,7 @@ const ArtistCard = ({
 
   return (
     <div className="card-artist rounded-2xl overflow-hidden group hover:shadow-xl transition-shadow duration-500">
+      
       {/* Artist photo */}
       <div className="relative h-64 overflow-hidden">
         <img
