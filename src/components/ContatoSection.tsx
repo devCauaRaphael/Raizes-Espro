@@ -51,7 +51,7 @@ const ContatoSection = () => {
               </div>
               <div>
                 <p className="font-body font-semibold text-cream">Telefone</p>
-                <p className="text-brown-light font-body text-sm">(21) 99999-0000</p>
+                <p className="text-brown-light font-body text-sm">(11) 99999-0000</p>
               </div>
             </div>
           </div>
