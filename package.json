@@ -1,5 +1,4 @@
   {
-    "homepage": "https://devcauaraphael.github/Raizes-Espro",
     "name": "vite_react_shadcn_ts",
     "private": true,
     "version": "0.0.0",
@@ -87,3 +86,4 @@
       "vitest": "^3.2.4"
     }
   }
+  
