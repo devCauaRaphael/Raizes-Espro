@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Playfair Display"', 'serif'],
-        body: ['"Source Sans 3"', 'sans-serif'],
+        display: ['"Archivo Black"', 'system-ui', 'sans-serif'],
+        body: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        graffiti: ['"Permanent Marker"', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,18 +52,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        moss: {
-          DEFAULT: "hsl(var(--moss))",
-          light: "hsl(var(--moss-light))",
-          dark: "hsl(var(--moss-dark))",
-        },
-        brown: {
-          light: "hsl(var(--brown-light))",
-          dark: "hsl(var(--brown-dark))",
-          darker: "hsl(var(--brown-darker))",
-        },
-        earth: "hsl(var(--earth))",
+        ink: "hsl(var(--ink))",
         cream: "hsl(var(--cream))",
+        purple: {
+          DEFAULT: "hsl(var(--purple))",
+          deep: "hsl(var(--purple-deep))",
+        },
+        lavender: "hsl(var(--lavender))",
+        lime: "hsl(var(--lime))",
+        olive: "hsl(var(--olive))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

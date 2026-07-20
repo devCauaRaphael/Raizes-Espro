@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { id: "", label: "Início" },
+  { id: "inicio", label: "Início" },
   { id: "sobre", label: "Sobre" },
-  { id: "datas", label: "Datas" },
-  { id: "divulgacoes", label: "Artistas" },
+  { id: "datas", label: "Agenda" },
+  { id: "eventos", label: "Eventos" },
   { id: "contato", label: "Contato" },
 ];
 
@@ -31,18 +31,18 @@ const FixedSidebar = () => {
       {navItems.map((item) => (
         <a
           key={item.id}
-          href={item.id ? `#${item.id}` : "#"}
+          href={`#${item.id}`}
           title={item.label}
           className="group relative flex items-center"
         >
           <span
-            className={`block rounded-full transition-all duration-300 ${
+            className={`block rounded-full transition-all duration-300 border-2 border-ink ${
               active === item.id
-                ? "w-3 h-3 bg-moss shadow-[0_0_8px_hsl(var(--moss)/0.5)]"
-                : "w-2 h-2 bg-brown-light/50 hover:bg-brown-light"
+                ? "w-3.5 h-3.5 bg-purple"
+                : "w-2.5 h-2.5 bg-cream hover:bg-lime"
             }`}
           />
-          <span className="absolute left-6 px-2 py-1 rounded bg-brown-darker/90 text-cream text-xs font-body whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+          <span className="absolute left-7 px-2 py-1 rounded bg-ink text-cream text-xs font-body font-semibold uppercase tracking-wide whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
             {item.label}
           </span>
         </a>

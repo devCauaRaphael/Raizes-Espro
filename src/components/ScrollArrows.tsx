@@ -1,7 +1,7 @@
 import { ChevronUp, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const sections = ["#", "#sobre", "#datas", "#divulgacoes", "#contato"];
+const sections = ["#inicio", "#sobre", "#datas", "#eventos", "#contato"];
 
 const ScrollArrows = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,14 +36,16 @@ const ScrollArrows = () => {
       <button
         onClick={() => scrollTo("up")}
         disabled={currentIndex === 0}
-        className="w-10 h-10 rounded-full bg-moss/90 text-cream flex items-center justify-center backdrop-blur-sm hover:bg-moss transition-colors disabled:opacity-30 disabled:cursor-not-allowed shadow-lg"
+        aria-label="Seção anterior"
+        className="w-11 h-11 rounded-full bg-purple text-cream border-2 border-ink flex items-center justify-center hover:bg-ink transition-colors disabled:opacity-30 disabled:cursor-not-allowed shadow-[4px_4px_0_hsl(var(--ink))]"
       >
         <ChevronUp className="w-5 h-5" />
       </button>
       <button
         onClick={() => scrollTo("down")}
         disabled={currentIndex === sections.length - 1}
-        className="w-10 h-10 rounded-full bg-moss/90 text-cream flex items-center justify-center backdrop-blur-sm hover:bg-moss transition-colors disabled:opacity-30 disabled:cursor-not-allowed shadow-lg"
+        aria-label="Próxima seção"
+        className="w-11 h-11 rounded-full bg-lime text-ink border-2 border-ink flex items-center justify-center hover:bg-olive transition-colors disabled:opacity-30 disabled:cursor-not-allowed shadow-[4px_4px_0_hsl(var(--ink))]"
       >
         <ChevronDown className="w-5 h-5" />
       </button>

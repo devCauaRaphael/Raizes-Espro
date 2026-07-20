@@ -1,62 +1,77 @@
 import { CalendarDays, MapPin, Clock } from "lucide-react";
 
 const eventos = [
-  { data: "15 de Março, 2026", local: "Centro Cultural Banco do Brasil — Rio de Janeiro, RJ", horario: "14h às 22h" },
-  { data: "22 de Março, 2026", local: "SESC Pompeia — São Paulo, SP", horario: "16h às 23h" },
-  { data: "05 de Abril, 2026", local: "Fundação de Arte de Ouro Preto — Ouro Preto, MG", horario: "10h às 20h" },
-  { data: "19 de Abril, 2026", local: "Mercado da Ribeira — Salvador, BA", horario: "15h às 00h" },
+  { dia: "24", mes: "JUL", data: "Sexta, 24 de Julho", local: "Audio Club — Barra Funda", horario: "23h · madrugada", tag: "Balada" },
+  { dia: "02", mes: "AGO", data: "Sábado, 02 de Agosto", local: "SESC Pompeia — Pompeia", horario: "16h às 22h", tag: "Show" },
+  { dia: "09", mes: "AGO", data: "Sábado, 09 de Agosto", local: "Parque Ibirapuera — Vila Mariana", horario: "10h às 17h", tag: "Beneficente" },
+  { dia: "16", mes: "AGO", data: "Sábado, 16 de Agosto", local: "Beco do Batman — Vila Madalena", horario: "14h às 21h", tag: "Gastronomia" },
+  { dia: "22", mes: "AGO", data: "Sexta, 22 de Agosto", local: "MASP — Avenida Paulista", horario: "19h às 23h", tag: "Exposição" },
 ];
 
 const DatasSection = () => {
   return (
-    <section id="datas" className="py-24 bg-gradient-to-b from-brown-darker via-brown-dark to-brown-darker">
-      <div className="container max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-moss/20 text-moss text-sm font-semibold mb-4 border border-moss/30">
-            Agenda 2026
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-cream mb-4">
-            Programação
-          </h2>
-          <p className="text-brown-light text-lg max-w-xl mx-auto">
-            Confira as datas e locais dos próximos eventos do movimento
+    <section id="datas" className="py-24 relative overflow-hidden bg-ink">
+      {/* Rich decorative background */}
+      <div className="absolute inset-0 opacity-30 bg-stripes" />
+      <div className="absolute -top-32 left-1/4 w-[500px] h-[500px] rounded-full bg-purple/40 blur-[140px]" />
+      <div className="absolute -bottom-32 right-1/4 w-[500px] h-[500px] rounded-full bg-lime/20 blur-[140px]" />
+      <div className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `radial-gradient(hsl(var(--lime) / 0.3) 1px, transparent 1.5px)`,
+          backgroundSize: "22px 22px",
+        }}
+      />
+
+      <div className="container max-w-6xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-14 gap-6">
+          <div>
+            <span className="inline-block px-3 py-1 rounded-full bg-lime text-ink text-xs font-body font-bold uppercase tracking-widest mb-4 border-2 border-cream">
+              /Agenda · 2026
+            </span>
+            <h2 className="text-5xl md:text-7xl font-display text-cream leading-none">
+              Próximos <span className="text-lime font-graffiti">rolês</span>
+            </h2>
+          </div>
+          <p className="text-lavender font-body text-lg max-w-sm">
+            A cena da cidade em ordem cronológica. Marque no calendário antes que esgote.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="space-y-4">
           {eventos.map((evento, i) => (
             <div
               key={i}
-              className="relative rounded-2xl p-8 bg-brown-dark/60 backdrop-blur-md border border-moss/20 hover:border-moss/40 transition-all duration-500 shadow-xl hover:shadow-2xl hover:-translate-y-2"
+              className="group relative rounded-2xl overflow-hidden opacity-0 animate-fade-in-up bg-cream border-2 border-cream hover:border-lime transition-colors duration-300"
+              style={{ animationDelay: `${i * 0.1}s` }}
             >
-              {/* Número do evento */}
-              <div className="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-full bg-moss/20 text-moss font-bold text-sm">
-                {String(i + 1).padStart(2, "0")}
+              <div className="flex flex-col md:flex-row md:items-stretch">
+                {/* Date block */}
+                <div className="flex md:flex-col items-center justify-center gap-3 md:gap-0 px-6 py-4 md:py-6 md:w-32 bg-purple text-cream border-b-2 md:border-b-0 md:border-r-2 border-ink">
+                  <span className="font-display text-4xl md:text-5xl leading-none">{evento.dia}</span>
+                  <span className="font-body text-sm uppercase tracking-widest font-bold">{evento.mes}</span>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 p-5 md:p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+                  <div className="flex-1">
+                    <span className="inline-block bg-ink text-lime text-[10px] font-body font-bold uppercase tracking-widest px-2 py-0.5 rounded mb-2">
+                      {evento.tag}
+                    </span>
+                    <p className="font-display text-ink text-lg mb-2 uppercase">{evento.data}</p>
+                    <div className="flex items-center gap-2 text-ink/70 font-body text-sm">
+                      <MapPin className="w-4 h-4 shrink-0" />
+                      {evento.local}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <Clock className="w-4 h-4 text-purple" />
+                    <span className="font-body font-semibold text-ink text-sm">{evento.horario}</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Data */}
-              <div className="flex items-center gap-3 mb-4">
-                <CalendarDays className="w-5 h-5 text-moss" />
-                <span className="text-cream font-semibold text-lg">
-                  {evento.data}
-                </span>
-              </div>
-
-              {/* Local */}
-              <div className="flex items-start gap-3 mb-6">
-                <MapPin className="w-5 h-5 text-moss/70 mt-1" />
-                <span className="text-brown-light">
-                  {evento.local}
-                </span>
-              </div>
-
-              {/* Horário */}
-              <div className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-moss" />
-                <span className="bg-moss text-cream px-5 py-2 rounded-full text-sm font-semibold shadow-md">
-                  {evento.horario}
-                </span>
-              </div>
+              {/* Hover accent */}
+              <div className="absolute left-0 top-0 h-full w-1 bg-lime scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300" />
             </div>
           ))}
         </div>
