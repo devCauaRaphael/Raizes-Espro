@@ -19,67 +19,198 @@ type Evento = {
   ocultarData?: boolean;
 };
 
+// Eventos de outubro — transcritos do post de divulgação.
+// TODO: o post não informa horários nem preços ("Consultar"). As imagens abaixo
+// são reaproveitadas das categorias mais próximas; troque por fotos específicas.
 const eventos: Evento[] = [
+  // ───────── Shows ─────────
   {
-    titulo: "Noite Underground",
-    categoria: "Balada",
-    descricao: "Line-up de DJs autorais com set de techno e house até o amanhecer.",
-    local: "Audio Club — Barra Funda",
-    data: "Sex, 24 Jul · 23h",
-    preco: "R$ 80",
-    imagem: balada,
-    cor: "purple",
-  },
-  {
-    titulo: "Bazar Solidário",
-    categoria: "Beneficente",
-    descricao: "Roupas, livros e comida a preço de doação. Toda renda para ONGs locais.",
-    local: "Parque Ibirapuera — Vila Mariana",
-    data: "Sáb, 09 Ago · 10h",
-    preco: "Entrada Franca",
-    imagem: beneficente,
-    cor: "lime",
-  },
-  {
-    titulo: "Festival Sonora",
+    titulo: "ZAYN",
     categoria: "Show",
-    descricao: "Palco a céu aberto com bandas independentes da cena paulistana.",
-    local: "SESC Pompeia — Pompeia",
-    data: "Sáb, 02 Ago · 16h",
-    preco: "R$ 40",
+    descricao: "O cantor britânico apresenta sua turnê em São Paulo, trazendo os principais sucessos da carreira solo.",
+    local: "Nubank Parque",
+    data: "Sáb, 10 Out",
+    preco: "Consultar",
     imagem: show,
     cor: "purple",
   },
   {
-    titulo: "Mostra Contemporânea",
-    categoria: "Exposição",
-    descricao: "Curadoria de artistas visuais emergentes com performance ao vivo.",
-    local: "MASP — Avenida Paulista",
-    data: "Sex, 22 Ago · 19h",
-    preco: "R$ 25",
-    imagem: exposicao,
-    cor: "lavender",
+    titulo: "Robbie Williams",
+    categoria: "Show",
+    descricao: "O cantor britânico retorna a São Paulo para uma apresentação com grandes sucessos de sua carreira.",
+    local: "Nubank Parque",
+    data: "Ter, 13 Out",
+    preco: "Consultar",
+    imagem: show,
+    cor: "purple",
   },
   {
-    titulo: "Feira Gastronômica",
+    titulo: "Jorge Ben Jor",
+    categoria: "Show",
+    descricao: "O cantor e compositor brasileiro apresenta um show com clássicos que marcaram sua trajetória na música brasileira.",
+    local: "Nubank Parque",
+    data: "Sáb, 17 Out",
+    preco: "Consultar",
+    imagem: show,
+    cor: "purple",
+  },
+  {
+    titulo: "Iron Maiden",
+    categoria: "Show",
+    descricao: "A banda britânica traz a turnê Run For Your Lives World Tour para São Paulo, celebrando sua trajetória e seus grandes sucessos.",
+    local: "Nubank Parque",
+    data: "25 e 27 Out",
+    preco: "Consultar",
+    imagem: show,
+    cor: "purple",
+  },
+  {
+    titulo: "The Pussycat Dolls",
+    categoria: "Show",
+    descricao: "O grupo retorna aos palcos com a turnê PCD Forever Tour, reunindo seus maiores sucessos.",
+    local: "Nubank Parque",
+    data: "Sex, 30 Out",
+    preco: "Consultar",
+    imagem: show,
+    cor: "purple",
+  },
+  {
+    titulo: "O Maior Encontro do Samba",
+    categoria: "Show",
+    descricao: "Zeca Pagodinho, Alcione e Jorge Aragão se reúnem em um grande encontro dedicado ao samba.",
+    local: "Nubank Parque",
+    data: "Sáb, 31 Out",
+    preco: "Consultar",
+    imagem: show,
+    cor: "purple",
+  },
+
+  // ───────── Games, esporte e sustentabilidade ─────────
+  {
+    titulo: "Brasil Game Show",
+    categoria: "Games",
+    descricao: "Grande evento de games e cultura geek, com jogos, lançamentos, experiências, competições e convidados.",
+    local: "Distrito Anhembi",
+    data: "9 a 12 Out",
+    preco: "Consultar",
+    imagem: balada,
+    cor: "purple",
+  },
+  {
+    titulo: "UOL Run",
+    categoria: "Esporte",
+    descricao: "Corrida e caminhada pelas ruas da região do Ibirapuera, reunindo participantes em diferentes categorias.",
+    local: "Obelisco do Ibirapuera",
+    data: "Dom, 18 Out",
+    preco: "Consultar",
+    imagem: beneficente,
+    cor: "lime",
+  },
+  {
+    titulo: "ECO Expo Brasil",
+    categoria: "Sustentabilidade",
+    descricao: "Evento voltado à sustentabilidade, gestão de resíduos, soluções ambientais e inovação.",
+    local: "Expo Center Norte",
+    data: "20 a 22 Out",
+    preco: "Consultar",
+    imagem: beneficente,
+    cor: "lime",
+  },
+
+  // ───────── Gastronomia ─────────
+  {
+    titulo: "São Paulo Food Film Fest",
     categoria: "Gastronomia",
-    descricao: "Food trucks, cervejarias artesanais e DJ residente até a noite.",
-    local: "Beco do Batman — Vila Madalena",
-    data: "Sáb, 16 Ago · 14h",
-    preco: "Entrada Franca",
+    descricao: "Festival que mistura cinema e gastronomia, com filmes, aulas-show, feirinha e experiências sobre alimentação.",
+    local: "CCSP, Reserva Cultural e outros espaços",
+    data: "1 a 14 Out",
+    preco: "Consultar",
     imagem: gastronomia,
     cor: "lime",
   },
   {
-    titulo: "Stand-up na Cave",
-    categoria: "Comédia",
-    descricao: "Comediantes do circuito paulistano em noite intimista de humor ácido.",
-    local: "Comedians Comedy Club — Pinheiros",
-    data: "A confirmar",
-    preco: "R$ 60",
+    titulo: "Wine&Jazz Sessions",
+    categoria: "Gastronomia",
+    descricao: "Festival que reúne vinhos, gastronomia, jazz e soul ao vivo, com chefs, restaurantes e experiências gastronômicas ao ar livre. Estações culturais.",
+    local: "Parque Villa-Lobos",
+    data: "17 e 18 Out",
+    preco: "Consultar",
+    imagem: gastronomia,
+    cor: "lime",
+  },
+  {
+    titulo: "Emiliano Market Day",
+    categoria: "Gastronomia",
+    descricao: "Feira gastronômica gratuita com produtores artesanais, chefs, degustações, oficinas, música e atividades para o público.",
+    local: "Expo Center Norte",
+    data: "6 a 8 Out",
+    preco: "Entrada Franca",
+    imagem: gastronomia,
+    cor: "lime",
+  },
+
+  // ───────── Teatro ─────────
+  {
+    titulo: "O Pianista e o Poeta",
+    categoria: "Teatro",
+    descricao: "Espetáculo que combina piano e literatura, com João Carlos Martins e Gabriel Chalita.",
+    local: "Teatro FAAP",
+    data: "7, 8, 14, 15, 21 e 22 Out",
+    preco: "Consultar",
+    imagem: exposicao,
+    cor: "lavender",
+  },
+  {
+    titulo: "Savannah Bay É Você",
+    categoria: "Teatro",
+    descricao: "Peça-instalação inspirada na obra da escritora Marguerite Duras, que mistura teatro, projeções cinematográficas e artes visuais para explorar memórias e relações familiares.",
+    local: "Itaú Cultural — Avenida Paulista",
+    data: "Até 18 Out",
+    preco: "Consultar",
+    imagem: exposicao,
+    cor: "lavender",
+  },
+  {
+    titulo: "A História Que Se Repete",
+    categoria: "Teatro",
+    descricao: "Com Rocco Pitanga e Robson Nunes, a peça apresenta dois homens vivendo em um futuro distópico no qual tempo, memória e realidade se repetem em ciclos.",
+    local: "Sesc Ipiranga",
+    data: "9 Out a 8 Nov",
+    preco: "Consultar",
+    imagem: exposicao,
+    cor: "lavender",
+  },
+
+  // ───────── Cinema ─────────
+  {
+    titulo: "Open Air Brasil",
+    categoria: "Cinema",
+    descricao: "Festival de cinema ao ar livre, com telão gigante, filmes, atrações musicais e área gastronômica.",
+    local: "Jockey Club de São Paulo",
+    data: "6 a 18 Out",
+    preco: "Consultar",
     imagem: standup,
     cor: "lavender",
-    ocultarData: true,
+  },
+  {
+    titulo: "Cine na Praça — Monster-O-Rama",
+    categoria: "Cinema",
+    descricao: "Mostra gratuita de filmes de terror ao ar livre, com clássicos do gênero, microfone aberto e concurso de fantasias no Halloween.",
+    local: "Jockey Club de São Paulo",
+    data: "Durante outubro",
+    preco: "Entrada Franca",
+    imagem: standup,
+    cor: "lavender",
+  },
+  {
+    titulo: "50ª Mostra Internacional de Cinema de São Paulo",
+    categoria: "Cinema",
+    descricao: "A edição de 50 anos reúne 380 filmes de 93 países, além de sessões especiais, debates e convidados internacionais.",
+    local: "Diversos cinemas e espaços culturais",
+    data: "15 a 29 Out",
+    preco: "Consultar",
+    imagem: standup,
+    cor: "lavender",
   },
 ];
 
@@ -94,7 +225,7 @@ const EventCard = ({ evento }: { evento: Evento }) => {
   const [mostrarData, setMostrarData] = useState(!evento.ocultarData);
 
   return (
-    <article className="sticker group bg-cream rounded-2xl overflow-hidden flex flex-col">
+    <article className="sticker group bg-cream rounded-2xl overflow-hidden flex flex-col h-full">
       <div className="relative h-52 overflow-hidden border-b-2 border-ink">
         <img
           src={evento.imagem}
@@ -156,7 +287,8 @@ const EventCard = ({ evento }: { evento: Evento }) => {
 
 const EventosSection = () => {
   const [filtro, setFiltro] = useState<string>("Tudo");
-  const categorias = ["Tudo", "Balada", "Show", "Beneficente", "Exposição", "Gastronomia", "Comédia"];
+  // Chips gerados a partir dos eventos, para nunca ficarem fora de sincronia com as categorias.
+  const categorias = ["Tudo", ...Array.from(new Set(eventos.map((e) => e.categoria)))];
   const eventosFiltrados = filtro === "Tudo" ? eventos : eventos.filter((e) => e.categoria === filtro);
 
   return (
@@ -178,7 +310,7 @@ const EventosSection = () => {
           </p>
         </div>
 
-        {/* Category filter chips (visual only) */}
+        {/* Filtro por categoria */}
         <div className="flex flex-wrap gap-2 mb-10">
           {categorias.map((cat) => {
             const ativo = filtro === cat;
