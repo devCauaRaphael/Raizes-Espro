@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Calendar, Ticket, Eye, EyeOff } from "lucide-react";
+import { MapPin, Calendar, Ticket } from "lucide-react";
 import balada from "@/assets/event-balada.jpg";
 import beneficente from "@/assets/event-beneficente.jpg";
 import show from "@/assets/event-show.jpg";
@@ -16,8 +16,10 @@ type Evento = {
   preco: string;
   imagem: string;
   cor: "purple" | "lime" | "lavender";
-  ocultarData?: boolean;
 };
+
+// Link do post de divulgação no Instagram (destino do botão "Quero ir").
+const INSTAGRAM_POST_URL = "https://www.instagram.com/p/DePED35ERGG/";
 
 // Eventos de outubro — transcritos do post de divulgação.
 // TODO: o post não informa horários nem preços ("Consultar"). As imagens abaixo
@@ -222,8 +224,6 @@ const corBadge = (cor: Evento["cor"]) =>
     : "bg-lavender text-ink";
 
 const EventCard = ({ evento }: { evento: Evento }) => {
-  const [mostrarData, setMostrarData] = useState(!evento.ocultarData);
-
   return (
     <article className="sticker group bg-cream rounded-2xl overflow-hidden flex flex-col h-full">
       <div className="relative h-52 overflow-hidden border-b-2 border-ink">
@@ -258,28 +258,20 @@ const EventCard = ({ evento }: { evento: Evento }) => {
           <span>{evento.local}</span>
         </div>
 
-        <div className="flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-ink/80 font-body text-sm">
-            <Calendar className="w-4 h-4 text-purple shrink-0" />
-            {mostrarData ? (
-              <span className="font-semibold">{evento.data}</span>
-            ) : (
-              <span className="italic text-ink/50">Data oculta</span>
-            )}
-          </div>
-          <button
-            onClick={() => setMostrarData((v) => !v)}
-            className="text-ink/60 hover:text-purple transition-colors p-1"
-            aria-label={mostrarData ? "Ocultar data" : "Mostrar data"}
-          >
-            {mostrarData ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-          </button>
+        <div className="flex items-center gap-2 text-ink/80 font-body text-sm">
+          <Calendar className="w-4 h-4 text-purple shrink-0" />
+          <span className="font-semibold">{evento.data}</span>
         </div>
 
-        <button className="mt-auto inline-flex items-center justify-center gap-2 bg-ink text-cream font-body font-bold uppercase tracking-wide text-sm py-2.5 rounded-full hover:bg-purple transition-colors border-2 border-ink">
+        <a
+          href={INSTAGRAM_POST_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-auto inline-flex items-center justify-center gap-2 bg-ink text-cream font-body font-bold uppercase tracking-wide text-sm py-2.5 rounded-full hover:bg-purple transition-colors border-2 border-ink"
+        >
           <Ticket className="w-4 h-4" />
           Quero ir
-        </button>
+        </a>
       </div>
     </article>
   );
