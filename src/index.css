@@ -9,11 +9,11 @@
     /* RoteirizaSP palette */
     --cream: 48 26% 94%;             /* #F5F3EB */
     --ink: 260 15% 8%;               /* near-black */
-    --purple: 273 62% 43%;           /* #722AB1 */
-    --purple-deep: 273 65% 30%;
-    --lavender: 290 15% 77%;         /* #C9BDCD */
-    --lime: 70 96% 51%;              /* #CAFC05 */
-    --olive: 72 74% 64%;             /* #CBE85E */
+    --purple: 14 72% 40%;           /* #722AB1 */
+    --purple-deep: 14 70% 28%;
+    --lavender: 32 35% 74%;         /* #C9BDCD */
+    --lime: 44 96% 54%;              /* #CAFC05 */
+    --olive: 140 45% 38%;             /* #CBE85E */
 
     --background: 48 26% 94%;
     --foreground: 260 15% 8%;
@@ -24,7 +24,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 260 15% 8%;
 
-    --primary: 273 62% 43%;
+    --primary: 14 72% 40%;
     --primary-foreground: 48 26% 94%;
 
     --secondary: 290 15% 77%;
@@ -33,7 +33,7 @@
     --muted: 48 15% 88%;
     --muted-foreground: 260 8% 40%;
 
-    --accent: 70 96% 51%;
+    --accent: 44 96% 54%;
     --accent-foreground: 260 15% 8%;
 
     --destructive: 0 84.2% 60.2%;
@@ -41,7 +41,7 @@
 
     --border: 260 10% 85%;
     --input: 260 10% 85%;
-    --ring: 273 62% 43%;
+    --ring: 14 72% 40%;
 
     --radius: 1rem;
 

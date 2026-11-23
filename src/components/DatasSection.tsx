@@ -1,11 +1,11 @@
 import { CalendarDays, MapPin, Clock } from "lucide-react";
 
 const eventos = [
-  { dia: "24", mes: "JUL", data: "Sexta, 24 de Julho", local: "Audio Club — Barra Funda", horario: "23h · madrugada", tag: "Balada" },
-  { dia: "02", mes: "AGO", data: "Sábado, 02 de Agosto", local: "SESC Pompeia — Pompeia", horario: "16h às 22h", tag: "Show" },
-  { dia: "09", mes: "AGO", data: "Sábado, 09 de Agosto", local: "Parque Ibirapuera — Vila Mariana", horario: "10h às 17h", tag: "Beneficente" },
-  { dia: "16", mes: "AGO", data: "Sábado, 16 de Agosto", local: "Beco do Batman — Vila Madalena", horario: "14h às 21h", tag: "Gastronomia" },
-  { dia: "22", mes: "AGO", data: "Sexta, 22 de Agosto", local: "MASP — Avenida Paulista", horario: "19h às 23h", tag: "Exposição" },
+  { dia: "13", mes: "NOV", data: "Sexta, 13 de Novembro", local: "Museu Afro Brasil — Ibirapuera", horario: "10h às 18h", tag: "Exposição" },
+  { dia: "15", mes: "NOV", data: "Domingo, 15 de Novembro", local: "Aparelha Luzia — Campos Elíseos", horario: "18h às 23h", tag: "Roda de Samba" },
+  { dia: "19", mes: "NOV", data: "Quinta, 19 de Novembro", local: "Casa de Cultura Hip Hop — Diadema", horario: "20h · madrugada", tag: "Baile" },
+  { dia: "20", mes: "NOV", data: "Sexta, 20 de Novembro", local: "Marcha — MASP → Praça da Sé", horario: "14h às 19h", tag: "Marcha" },
+  { dia: "22", mes: "NOV", data: "Domingo, 22 de Novembro", local: "Praça da Liberdade — Liberdade", horario: "11h às 20h", tag: "Feira Afro" },
 ];
 
 const DatasSection = () => {
@@ -29,11 +29,11 @@ const DatasSection = () => {
               /Agenda · 2026
             </span>
             <h2 className="text-5xl md:text-7xl font-display text-cream leading-none">
-              Próximos <span className="text-lime font-graffiti">rolês</span>
+              Novembro <span className="text-lime font-graffiti">Negro</span>
             </h2>
           </div>
           <p className="text-lavender font-body text-lg max-w-sm">
-            A cena da cidade em ordem cronológica. Marque no calendário antes que esgote.
+            Toda a programação da Consciência Negra em SP, em ordem cronológica.
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import heroBanner from "@/assets/hero-banner.jpg";
-import logoAsset from "@/assets/roteriza.jpeg";
+import logoAsset from "@/assets/roteiriza-logo.asset.json";
 
 const spSuffixColors = ["text-purple", "text-lime", "text-lavender"];
 
@@ -27,17 +27,18 @@ const HeroSection = () => {
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-ink text-cream text-xs font-body font-semibold tracking-widest uppercase mb-6 border-2 border-ink">
           <span className="w-2 h-2 rounded-full bg-lime animate-pulse" />
-          Cultura para todos · Ao vivo em SP
+          20 de Novembro · Dia da Consciência Negra
         </span>
         <h1 className="font-display text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight text-ink mb-6">
           Roteiriza
           <span
             className={`inline-block font-graffiti transition-colors duration-700 ease-in-out ${spSuffixColors[colorIndex]}`}
           >
+            SP
           </span>
         </h1>
         <p className="text-lg md:text-2xl text-ink/80 font-body max-w-2xl mx-auto mb-10 leading-relaxed">
-        <span className="paint-underline font-semibold">Os melhores locais</span> de <span className="paint-underline font-semibold">São Paulo</span> — todos os rolês da cidade em um só lugar.
+          Celebrando a <span className="paint-underline font-semibold">ancestralidade</span> e a <span className="paint-underline font-semibold">resistência</span> — os rolês da Consciência Negra em SP.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <a
@@ -47,15 +48,15 @@ const HeroSection = () => {
             Ver Rolês
           </a>
           <a
-            href="#contato"
+            href="/consciencia-negra"
             className="sticker px-8 py-3 bg-lime text-ink font-body font-bold uppercase tracking-wide rounded-full"
           >
-            Divulgar Evento
+            Dedicatória
           </a>
         </div>
 
         <img
-          src={logoAsset}
+          src={logoAsset.url}
           alt="RoteirizaSP"
           className="mx-auto mt-14 max-w-[280px] md:max-w-[360px] opacity-90 drop-shadow-xl"
         />
