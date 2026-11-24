@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoAsset from "@/assets/roteiriza-logo.asset.json";
-
+import logoAsset from "@/assets/roteriza.jpeg";
 const links = [
   { href: "#sobre", label: "Sobre" },
   { href: "#datas", label: "Agenda" },
@@ -18,7 +17,7 @@ const Navbar = () => {
       <div className="container max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         <a href="#" className="flex items-center gap-3 font-display text-xl text-ink tracking-tight">
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="Logo RoteirizaSP"
             className="w-10 h-10 rounded-full object-cover border-2 border-ink bg-cream"
           />

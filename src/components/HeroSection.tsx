@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import heroBanner from "@/assets/hero-banner.jpg";
-import logoAsset from "@/assets/roteiriza-logo.asset.json";
+import logoAsset from "@/assets/roteriza.jpeg";
 
 const spSuffixColors = ["text-purple", "text-lime", "text-lavender"];
 
@@ -56,7 +56,7 @@ const HeroSection = () => {
         </div>
 
         <img
-          src={logoAsset.url}
+          src={logoAsset}
           alt="RoteirizaSP"
           className="mx-auto mt-14 max-w-[280px] md:max-w-[360px] opacity-90 drop-shadow-xl"
         />
